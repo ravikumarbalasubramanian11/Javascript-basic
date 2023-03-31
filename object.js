@@ -140,7 +140,7 @@ function Person10(first, last, age, eye) {
     this.lastName = last;
     this.age = age;
     this.eyeColor = eye;
-    this.nationality=nationality;
+    
   }
   
   Person10.prototype.nationality = "Indian";  //used to inhertited the object property
@@ -150,3 +150,54 @@ function Person10(first, last, age, eye) {
   console.log(person11);
   console.log(person12);
 
+//sets
+ 
+const letter = new Set(["a","b","c"])
+//add=1
+ x=letter.add(1) 
+ console.log(letter); //Set(4) { 'a', 'b', 'c', 1 }
+
+//delete
+ x=letter.delete(1)
+ console.log(letter); //  Set(3) { 'a', 'b', 'c' }
+
+ //has
+ x=letter.has("a")
+ console.log(x); //true
+
+ //values
+ x=letter.values;
+ console.log(x);   //[function: values]
+ 
+ //delete
+ letter.clear();
+ console.log(letter);  //Set(0) {}
+
+
+ //Maps
+ const leader = new Map([
+  ["Mahatma", 1947],
+  ["Ambedkar", 1940],
+  ["Bose", 1930]
+]);
+
+c=leader.size
+console.log(c)  //3
+
+var x =leader.set("vivekanadha",1948)
+console.log(x) //'vivekanadha' => 1948
+
+var x= leader.get("vivekanadha")
+console.log(x) //1948
+
+let y= leader.forEach(
+  function(value){
+    console.log(value);
+  }    
+)                      //   1948 1947 1940 1930 1948
+text="  "
+for (const x of leader.entries()){
+    text += x +" ";
+  }
+  console.log(text);  //  Mahatma,1947 Ambedkar,1940 Bose,1930 vivekanadha,1948
+  
