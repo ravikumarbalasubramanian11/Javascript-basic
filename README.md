@@ -1,0 +1,2 @@
+ - Learn Basic about javascript
+ 
